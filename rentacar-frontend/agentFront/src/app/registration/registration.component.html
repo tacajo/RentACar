@@ -1,0 +1,121 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+<div>
+    <div id="register">
+        <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+            <div class="wrapper wrapper--w900">
+                <div class="card card-4 py-3">
+                    <div class="card-body">
+                        <ul class="tab-list">
+                            <h1 class="text-uppercase text-center font-weight-bold">
+                                Sign up</h1>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form (submit)="onSubmit()" name="myForm" class="text-center mt-5" novalidate>
+
+
+
+                                    <div class="input-group ">
+                                        <label class="label">Username:</label><br>
+                                        <input class="input--style-1" type="text" name="username"
+                                            pattern="[a-zA-Z0-9\\s\\-]{1,50}" [(ngModel)]="user.username"
+                                            #username="ngModel" placeholder="username" required="required">
+                                        <i class="zmdi zmdi-search input-group-symbol"></i>
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="username.touched && !username.valid">
+                                        Username is empty,or invalid. Signs like '%,<,>,:,;' are not allowed.</div>
+
+
+                                    <div class="input-group">
+                                        <label class="label">First name:</label><br>
+                                        <input class="input--style-1" type="text" name="firstName" #firstName="ngModel"
+                                            pattern="[a-zA-Z0-9\\s\\-]{1,50}" placeholder="first name"
+                                            [(ngModel)]="user.firstName" required="required">
+                                        <i class="zmdi zmdi-search input-group-symbol"></i>
+                                    </div>
+
+                                    <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                                        First name is empty, or invalid. Only letters are allowed.</div>
+
+                                    <div>
+                                        <div class="input-group">
+                                            <label class="label">Last name:</label><br>
+                                            <input class="input--style-1" [(ngModel)]="user.lastName"
+                                                #lastName="ngModel" pattern="[a-zA-Z0-9\\s\\-]{1,50}" type="text"
+                                                name="lastName" placeholder="last name" required="required">
+                                            <i class="zmdi zmdi-search input-group-symbol"></i>
+                                        </div>
+                                        <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+                                            Last name is empty, or invalid. Only letters are allowed.</div>
+                                    </div>
+
+                                    <div>
+                                        <div class="input-group">
+                                            <label class="label">Password:</label><br>
+                                            <input class="input--style-1" [(ngModel)]="user.password"
+                                                #password="ngModel" type="password"
+                                                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{10,}$"
+                                                name="password" placeholder="password" required="required">
+                                            <i class="zmdi zmdi-search input-group-symbol"></i>
+                                        </div>
+
+                                        <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                                            Password is invalid or weak. Please enter at least 10 characters including
+                                            numbers, small and big letters.</div>
+                                    </div>
+                                    <div>
+                                        <div class="input-group">
+                                            <label class="label">Confirm password:</label><br>
+                                            <input class="input--style-1" [(ngModel)]="user.confirmPassword"
+                                                #confirmPassword="ngModel" type="password"
+                                                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{10,}$"
+                                                name="confirmPassword" placeholder="Confirm password"
+                                                required="required">
+                                            <i class="zmdi zmdi-search input-group-symbol"></i>
+                                        </div>
+
+                                        <div class="alert alert-danger"
+                                            *ngIf="confirmPassword.touched && !confirmPassword.valid">
+                                            Confirm password is empty, or invalid.</div>
+                                        <div class="alert alert-danger" *ngIf="!this.confirmPass">
+                                            Please make sure your passwords match.</div>
+                                    </div>
+
+                                    <div class="input-group input-group-big">
+                                        <label class="label">Email:</label><br>
+                                        <input class="input--style-1" type="email" [(ngModel)]="user.email" name="email"
+                                            #email="ngModel"
+                                            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                                            placeholder="email" required="required">
+                                        <i class="zmdi zmdi-search input-group-symbol"></i>
+                                    </div>
+                                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                                        Please enter valid email.</div>
+
+
+
+                                    <div class="text-center mt-3">
+                                        <button class="btn-orange" type="submit">Sign up</button>
+                                    </div>
+                                </form>
+                                <div class="error-message">
+                                    <span>{{message}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://messageService.com/message" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://messageService.com/message" targetNamespace="http://messageService.com/message">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://messageService.com/message" version="1.0">
+            <xs:complexType name="Message">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:long"/>
+                    <xs:element minOccurs="0" name="content" type="xs:string"/>
+                    <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="senderID" type="xs:long"/>
+                    <xs:element minOccurs="0" name="receiverID" type="xs:long"/>
+                    <xs:element minOccurs="0" name="adID" type="xs:long"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:portType name="Messages"> </wsdl:portType>
+    <wsdl:binding name="MessagesSoap11" type="tns:Messages">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    </wsdl:binding>
+    <wsdl:service name="MessagesService">
+        <wsdl:port binding="tns:MessagesSoap11" name="MessagesSoap11">
+            <soap:address location="http://localhost:8082/ws"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,62 @@
+.buttonDetails {
+    border-radius: 4px;
+    background-color: #252D40;
+    border: #F5992E solid 3px;
+    color: #F5992E;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .buttonDetails span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonDetails span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonDetails:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonDetails:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 50px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext
+{
+  /* Checkbox text */
+  font-size: 110%;
+  display: inline;
+  padding-inline-start: 10px;
+}
+
+#bundle {
+  background: rgb(37, 45, 64, 0.7);
+}

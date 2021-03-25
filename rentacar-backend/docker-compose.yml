@@ -1,0 +1,91 @@
+version: '3'
+services:
+
+  eureka-serviceregistry:
+    build: ./eureka
+    ports:
+     - "8761:8761"
+    tty: true
+
+  mysql_db:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_PASSWORD: aleksandar123
+      MYSQL_ROOT_PASSWORD: aleksandar123
+    volumes:
+      - mysql_db_container:/var/lib/mysql
+
+  ad-service:
+    build: ./adService
+    ports:
+    - "8080:8080"
+    environment:
+      - REGISTRY_HOST=eureka-serviceregistry
+      - MYSQL_HOST=mysql_db
+    tty: true
+    depends_on:
+      - eureka-serviceregistry
+      - mysql_db
+
+  auth-service:
+    build: ./authService
+    ports:
+    - "8081:8081"
+    environment:
+      - REGISTRY_HOST=eureka-serviceregistry
+      - MYSQL_HOST=mysql_db
+    tty: true
+    depends_on:
+      - eureka-serviceregistry
+      - mysql_db
+
+  message-service:
+    build: ./messageService
+    ports:
+    - "8082:8082"
+    environment:
+      - REGISTRY_HOST=eureka-serviceregistry
+      - MYSQL_HOST=mysql_db
+    tty: true
+    depends_on:
+      - eureka-serviceregistry
+      - mysql_db
+
+  rentacar-service:
+    build: ./rentACarService
+    ports:
+    - "8083:8083"
+    environment:
+      - REGISTRY_HOST=eureka-serviceregistry
+      - MYSQL_HOST=mysql_db
+    tty: true
+    depends_on:
+      - eureka-serviceregistry
+      - mysql_db
+
+  zuul:
+    build: ./zuul
+    ports:
+    - "8084:8084"
+    environment:
+      - REGISTRY_HOST=eureka-serviceregistry
+    tty: true
+    depends_on:
+      - eureka-serviceregistry
+      - ad-service
+      - auth-service
+      - message-service
+      - rentacar-service
+
+# Names our volume
+volumes:
+  mysql_db_container:
+
+  
+
+  

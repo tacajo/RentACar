@@ -1,0 +1,27 @@
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <div  *ngFor="let image of images" >
+                <img style="max-width: 250px; max-height: 250px;" src='{{image}}'/>
+              </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ad.car.brand}} {{ad.car.model}}</h5>
+                <span *ngIf="limitKms">You have to pay more to have an extra {{this.planKms - this.ad.car.limitKms}} kilometers</span> 
+                <p class="card-text" style="margin-top: 1em;"><i class="fa fa-map-marker-alt" style="font-size:30px;color:#F5992E;"></i>  {{ad.city}}</p>
+                <p><button class="buttonDetails" (click)="open()"><span>Details</span></button></p>
+                <p class="card-text"><small class="text-muted">Uploaded by {{user.firstName}} {{user.lastName}}</small> 
+                    <button class="btn btn-secondary" *ngIf="isUser() && this.buttonVisible" (click)="addToCart()" style="float: right;"><i class="fa fa-shopping-cart" style="font-size:35px;color:#F5992E;"></i></button>
+                </p>
+                <span>{{message}}</span>
+                <button (click)="showMap()" class="btn btn-secondary">See map <i class="fas fa-location-arrow" style="font-size:20px;color:#F5992E;"></i></button>
+                <br>
+                <button (click)="seeComment(ad.id)" class="btn btn-secondary">See comments<i class="fa fa-comments" style="font-size:30px;color:#F5992E;"></i></button>
+                <div *ngFor="let comment of comments">
+                    <app-comments-list [comment]="comment"></app-comments-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

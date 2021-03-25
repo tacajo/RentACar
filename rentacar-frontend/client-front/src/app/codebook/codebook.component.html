@@ -1,0 +1,105 @@
+<div id="codebook"  class="container-fluid">
+  <h1 class="pt-5 text-center">CODE<span>BOOK</span></h1>
+  <br>
+  <div id="entity" class="container">
+    <br>
+    <h1 id="title" class="pt-5 text-center">Add new<span> entity</span></h1>
+    <br>
+      <form (submit)="addNew()" >
+        <select [(ngModel)]="selectedValue" name="selectedValue" class="custom-select">
+          <option value="Model" selected>Model</option>
+          <option value="Brand">Brand</option>
+          <option value="Fuel">Fuel</option>
+          <option value="Class">Class</option>
+          <option value="Gear Shift">Gear Shift</option>
+        </select>
+        <div class="input-group">
+          <span>Name</span>
+          <input [(ngModel)] = "name" name="name" type="text"  aria-label="Default">
+        </div>
+        <br>
+        <button class="btn-orange">Add</button>
+        <br>
+        <br>
+      </form>
+      
+  </div>
+      <br>
+      <br>
+        <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Model</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let model of models">
+                <td>{{model.name}}</td>
+                <td><button (click)="deleteModel(model.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Brand</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let brand of brands">
+                <td>{{brand.name}}</td>
+                <td><button (click)="deleteBrand(brand.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Car Class</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let carClass of carClasses">
+                <td>{{carClass.name}}</td>
+                <td><button (click)="deleteCarClass(carClass.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Fuel</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fuel of fuels">
+                <td>{{fuel.name}}</td>
+                <td><button (click)="deleteFuel(fuel.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Gear Shift</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let gearShift of gearShifts">
+                <td>{{gearShift.name}}</td>
+                <td><button (click)="deleteGearShift(gearShift.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              </tr>
+            </tbody>
+          </table>
+        <br>
+        <p>Codebook</p>     
+</div>

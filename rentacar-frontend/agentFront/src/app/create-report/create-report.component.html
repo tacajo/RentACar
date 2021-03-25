@@ -1,0 +1,67 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+<div>
+    <div id="banner">
+        <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+            <div class="wrapper wrapper--w900">
+                <div class="card card-4 py-3">
+                    <div class="card-body">
+                        <ul class="tab-list">
+                            <h1 class="text-uppercase text-center font-weight-bold">
+                                Create report</h1>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form (submit)="onSubmit()" name="myForm" class="text-center mt-5" novalidate>
+
+
+                                    <div class="input-group">
+                                        <label class="label">Ad id:</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select class="input--style-1" name="adID" [(ngModel)]="report.adID"
+                                                tabindex="-1">
+                                                <option [value]="adID" *ngFor="let adID of adIDs">
+                                                    {{adID}}</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="input-group ">
+                                        <label class="label">Additional info:</label><br>
+                                        <textarea type="text" name="AdditionalInfo" [(ngModel)]="report.additionalInfo"
+                                            pattern="[a-zA-Z0-9\\s\\-]{1,200}" #additionalInfo="ngModel">
+                                       </textarea>
+                                       <div class="alert alert-danger" *ngIf="additionalInfo.touched && !additionalInfo.valid">
+                                        Additional info is invalid. Signs like '%,<,>,:,;' are not allowed.</div>
+
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label> Kilometres travelled:</label><br>
+                                        <input type="number" placeholder="number of kilometres" required="required"
+                                            name="kms" [(ngModel)]="report.kms"> <br> <br>
+                                    </div>
+
+                                    <div class="text-center mt-3">
+                                        <button class="btn-orange" type="submit">Send report</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

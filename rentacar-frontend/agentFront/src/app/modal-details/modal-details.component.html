@@ -1,0 +1,17 @@
+<div class="modal-header color">
+    <h4 class="modal-title">{{ad.car.brand}} {{ad.car.model}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body color">
+    <p><i class="fas fa-gas-pump" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.fuel}}</p>
+    <p><i class="fas fa-cog" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.gearShift}}</p>
+    <p><i class="fas fa-car-side" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.carClass}}</p>
+    <p><i class="fas fa-route" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.traveledKms}}km traveled</p>
+    <p><i class="fa fa-ban" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.limitKms}}km limit</p>
+    <p><i class="fas fa-baby" style="font-size:20px;color:#F5992E;"></i>  {{ad.car.childSeats}}</p>
+</div>
+<div class="modal-footer color">
+    <button type="button" class="buttonDetails" (click)="activeModal.close('Close click')">Close</button>
+</div>

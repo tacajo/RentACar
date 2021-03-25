@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+a:hover{
+    text-decoration: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.container{
+  padding: 0 15px;
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+}
+
+header{
+  background: #252D40;
+  padding: 10px 0;
+}
+
+header a{
+  color: #fff;
+}
+
+.logo{
+  font-weight: bold;
+}
+
+.logo > span{
+  color: #F5992E;
+}
+
+.logo:hover{
+    color: #fff;
+    opacity: 0.8;
+}
+
+nav{
+  float: right;
+}
+
+nav > a{
+  display: inline-block !important;
+  padding: 0px 5px ;
+}
+
+nav > a:hover{
+    border-bottom: #F5992E solid 3px;
+    color: rgb(199, 199, 199);
+    padding-bottom: 15px ;
+
+}
+
+/* SEARCH COMPONENT */
+
+#search-component{
+    background: url('app/images/slika-search-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 92.8vh;
+    padding: 12vh 0;
+}
+
+#search-component-show-results{
+    background: url('app/images/slika-search-bg.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 92.8vh;
+    width: 100%;
+    padding: 1vh 0;
+}
+
+#messages-component{
+    background: url('app/images/slika-search-bg.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 92.8vh;
+    width: 100%;
+    padding: 1vh 0;
+}
+
+
+.search-bg{
+    color: #fff;
+}
+
+#banner{
+    background: url('app/images/login-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 92.8vh;
+    padding: 12vh 0;
+}
+
+#hehhe{
+    background: url('app/images/login-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    padding: 12vh 0;
+}
+
+#banner .card , #hehhe .card{
+    width: 30%;
+    margin-left: 35%;
+    background: rgb(37, 45, 64, 0.7);
+}
+
+#register{
+    background: url('app/images/login-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 12vh 0;
+}
+
+
+#register .card{
+    width: 30%;
+    margin-left: 35%;
+    background: rgb(37, 45, 64, 0.7);
+}
+
+#register .advance{
+    width: 70%;
+    margin-left: 15%;
+    background: rgb(37, 45, 64, 0.7);
+}
+
+.search-bg h1{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+span{
+    color: #F5992E;
+}
+
+.input-group{
+    display: inline-block;
+}
+
+.card-body > ul{
+    display: block;
+    margin: 0 auto;
+}
+
+.card-body > ul > li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.btn-orange{
+    background: #F5992E;
+    padding: 5px 10px ;
+    border: none;
+    color: #252D40;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-orange:hover{
+    background-color: #252D40;
+    color: #F5992E;
+}
+
+input{
+    padding: 3px 0;
+}
+
+.btn-advance{
+    background: #252D40;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-bottom: #F5992E solid 3px;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-advance:hover{
+    background-color: #F5992E;
+    color: #252D40;
+    border-bottom: #252D40 solid 3px;
+}
+
+.sort{
+    background: #252D40;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.order{
+    color: #fff;
+    float: right;
+}
+
+.card{
+    margin-top: 30px;
+    font-weight: bold;
+    background: #252D40;
+    color: #fff;
+}
+
+
+
+.card-title{
+    font-weight: bold;
+}
+
+.alert-danger{
+    color: #F5992E;
+    font-size: 11pt;
+    background: #252D40;
+    border: none;
+    margin: 15px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,28 @@
+2020-07-11 03:57:40,743 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 24532 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-11 03:57:40,751 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-11 03:59:17,632 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 99.0 seconds (JVM running for 102.593)
+2020-07-11 04:03:30,540 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 20152 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-11 04:03:30,545 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-11 04:05:11,024 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 101.74 seconds (JVM running for 102.671)
+2020-07-11 04:05:55,448 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-6] Successful login! Username: 'taca'.
+2020-07-11 04:06:17,650 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-4] Successful login! Username: 'zex'.
+2020-07-11 04:31:04,184 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 23260 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-11 04:31:04,189 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-11 04:34:32,709 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 13000 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-11 04:34:32,714 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-11 04:34:43,557 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 11.653 seconds (JVM running for 12.401)
+2020-07-11 04:38:44,040 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 18028 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-11 04:38:44,045 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-11 04:39:13,243 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 29.994 seconds (JVM running for 30.731)
+2020-07-12 02:54:18,419 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 13552 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-12 02:54:18,425 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-12 02:55:03,404 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 45.76 seconds (JVM running for 46.485)
+2020-07-12 02:56:08,854 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 19008 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-12 02:56:08,858 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-12 02:56:18,884 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 10.835 seconds (JVM running for 11.58)
+2020-07-12 02:59:03,876 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 17852 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-12 02:59:03,881 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-12 02:59:52,999 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on Laptop with PID 11040 (C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent\target\classes started by Urban in C:\Users\Urban\Desktop\4.godina\xml\XML-backend\agent)
+2020-07-12 02:59:53,005 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-12 03:00:55,054 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 62.818 seconds (JVM running for 63.57)
+2020-07-12 03:01:27,616 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-6] Successful login! Username: 'taca'.

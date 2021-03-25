@@ -1,0 +1,33 @@
+2020-07-04 16:20:40,726 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 47.522 seconds (JVM running for 50.03)
+2020-07-04 16:24:41,330 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on DESKTOP-G6V0CUS with PID 33272 (C:\Users\user\Desktop\XML\XML-backend\agent\target\classes started by user in C:\Users\user\Desktop\XML\XML-backend\agent)
+2020-07-04 16:24:41,338 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-04 16:25:24,364 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 45.332 seconds (JVM running for 47.732)
+2020-07-04 16:26:08,648 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-9] Successfully added new car: com.agent.model.Brand@4de376bdcom.agent.model.Model@55128eb5
+2020-07-04 16:26:08,843 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-9] Successfully added new ad with id:7 - for car: com.agent.model.Car@56912f0a
+2020-07-04 16:26:08,845 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-9] New add is created.
+2020-07-04 16:26:17,164 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-5] User search for ads. Search came back with 3 results
+2020-07-04 16:28:50,492 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-3] Successfully added new car: com.agent.model.Brand@6087c348com.agent.model.Model@49816d3f
+2020-07-04 16:28:50,656 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-3] Successfully added new ad with id:8 - for car: com.agent.model.Car@5a4ba719
+2020-07-04 16:28:50,658 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-3] New add is created.
+2020-07-04 16:43:05,066 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on DESKTOP-G6V0CUS with PID 24668 (C:\Users\user\Desktop\XML\XML-backend\agent\target\classes started by user in C:\Users\user\Desktop\XML\XML-backend\agent)
+2020-07-04 16:43:05,096 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-04 16:43:51,535 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 48.62 seconds (JVM running for 50.529)
+2020-07-04 16:55:35,648 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-10] Successfully added new car: com.agent.model.Brand@14f9050ccom.agent.model.Model@5c5f7d63
+2020-07-04 16:55:35,874 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-10] Successfully added new ad with id:7 - for car: com.agent.model.Car@d82544d
+2020-07-04 16:55:35,876 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-10] New add is created.
+2020-07-04 16:56:04,166 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-1] User search for ads. Search came back with 3 results
+2020-07-04 16:58:49,354 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-4] User search for ads. Search came back with 3 results
+2020-07-04 17:00:00,836 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-7] User search for ads. Search came back with 3 results
+2020-07-04 17:01:47,460 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-5] Successfully added new car: com.agent.model.Brand@ae522bfcom.agent.model.Model@3434c062
+2020-07-04 17:01:47,709 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-5] Successfully added new ad with id:8 - for car: com.agent.model.Car@473f3268
+2020-07-04 17:01:47,716 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-5] New add is created.
+2020-07-04 17:01:57,951 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-1] User search for ads. Search came back with 4 results
+2020-07-04 17:02:57,575 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-2] Successfully added new car: nullnull
+2020-07-04 17:03:09,283 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-6] Successfully added new car: com.agent.model.Brand@45be403ecom.agent.model.Model@550283bc
+2020-07-04 17:03:09,496 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-6] Successfully added new ad with id:9 - for car: com.agent.model.Car@3f2f7b4c
+2020-07-04 17:03:09,498 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-6] New add is created.
+2020-07-04 17:03:23,781 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-8] Successfully added new car: com.agent.model.Brand@66d6b85dcom.agent.model.Model@47d06186
+2020-07-04 17:03:24,289 INFO com.agent.service.AdServiceImpl [https-jsse-nio-8443-exec-8] Successfully added new ad with id:10 - for car: com.agent.model.Car@5998d33d
+2020-07-04 17:03:24,291 INFO com.agent.controller.AdController [https-jsse-nio-8443-exec-8] New add is created.
+2020-07-04 17:04:38,223 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on DESKTOP-G6V0CUS with PID 26976 (C:\Users\user\Desktop\XML\XML-backend\agent\target\classes started by user in C:\Users\user\Desktop\XML\XML-backend\agent)
+2020-07-04 17:04:38,230 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default

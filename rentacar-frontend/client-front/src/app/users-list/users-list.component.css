@@ -1,0 +1,12 @@
+#users-list {
+    background: url('src\app\images\slika-search-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 12vh 0;
+}
+
+img {
+    height: 20px;  
+    width: 20px;
+}

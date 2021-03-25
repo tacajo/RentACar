@@ -1,0 +1,87 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/register']">Sign up<span
+                    class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+
+<div>
+    <div id="hehhe">
+        <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+            <div class="wrapper wrapper--w900">
+                <div class="card card-4 py-3">
+                    <div class="card-body">
+                        <ul class="tab-list">
+                            <h1 class="text-uppercase text-center font-weight-bold">
+                                New price list</h1>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form name="myForm" (submit)="onSubmit()" class="text-center mt-5" novalidate>
+
+                                    <label class="label">Start date:</label> <br>
+                                    <input class="" name="startDate" [(ngModel)]="priceList.startDate" type="date">
+                                    <hr />
+                                    <label class="label">End date:</label> <br>
+                                    <input class="" name="endDate" [(ngModel)]="priceList.endDate" type="date">
+                                    <hr />
+                                    <label class="label">Daily price:</label> <br>
+                                    <input class="input--style-1"  name="price" [(ngModel)]="priceList.price"   pattern="[0-9.0-9]{1,50}"  #price="ngModel" type="text">
+                                    <div class="alert alert-danger" *ngIf="price.touched && !price.valid">Price
+                                        is invalid.</div>
+                                    <hr />
+                                    <label class="label">Collision damage waiver:</label> <br>
+                                    <input class="input--style-1"  name="collisionDamageWaiver" [(ngModel)]="priceList.collisionDamageWaiver"  pattern="[0-9.0-9]{1,50}"  #priceC="ngModel" type="text">
+                                    <hr />
+                                    <div class="alert alert-danger" *ngIf="priceC.touched && !priceC.valid">Price
+                                        is invalid.</div>
+                                    <label class="label">Price per kilometer:</label> <br>
+                                    <input class="input--style-1"  name="pricePerKm" [(ngModel)]="priceList.pricePerKm" pattern="[0-9.0-9]{1,50}"  #priceperKM="ngModel" type="text">
+                                    <div class="alert alert-danger" *ngIf="priceperKM.touched && !priceperKM.valid">Price per km
+                                        is invalid.</div>
+                                    <hr />
+                                    <div class="col-md-12">
+                                        <div class="text-center mt-5">
+                                            <button type="button" class="btn-orange" type="submit">Create price
+                                                list</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--
+
+<div id="banner">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <ul class="tab-list">
+                    <h1 class="text-uppercase text-center font-weight-bold">
+                        New price list</h1>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <form  name="myForm" class="text-center mt-5"  novalidate>
+                       
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>-->

@@ -1,0 +1,41 @@
+<div id="add-agent">
+  <div id="entity">
+    <br>
+    <h1 id="title" class="pt-5 text-center">Add new<span> agent</span></h1>
+    <br>
+    <form (submit)="onSubmit()" >
+        <div class="input-group">
+          <span>Username</span>
+          <input [(ngModel)] = "agent.username" name="name" type="text"  aria-label="Default">
+        </div>
+        <div class="input-group">
+          <span>Password</span>
+          <input [(ngModel)] = "agent.password" name="name" type="password"  aria-label="Default">
+        </div>
+        <div class="input-group">
+          <span>First name</span>
+          <input [(ngModel)] = "agent.firstName" name="name" type="text"  aria-label="Default">
+        </div>
+        <div class="input-group">
+          <span>Last name</span>
+          <input [(ngModel)] = "agent.lastName" name="name" type="text"  aria-label="Default">
+        </div>
+        <div class="input-group">
+            <span>Address</span>
+            <input [(ngModel)] = "agent.address" name="name" type="text"  aria-label="Default">
+        </div>
+        <div class="input-group">
+            <span>Business number</span>
+            <input [(ngModel)] = "agent.businessNumber" name="name" type="text"  aria-label="Default">
+        </div>
+        <br>
+        <button class="btn-orange">Add</button>
+        <br>
+        <br>
+      </form>
+
+      <div *ngIf="this.messageVisible" >
+        <span >{{message}}</span>
+      </div>
+    </div>
+</div>

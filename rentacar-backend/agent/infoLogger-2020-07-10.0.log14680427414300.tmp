@@ -1,0 +1,11 @@
+2020-07-10 16:03:23,116 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 67.765 seconds (JVM running for 82.178)
+2020-07-10 16:07:09,856 INFO org.springframework.boot.StartupInfoLogger [main] Starting AgentApplication on DESKTOP-2AP4UHE with PID 7420 (C:\Users\Afrodita\Desktop\VIIIsemestar\PROJEKAT\XML-backend\agent\target\classes started by Afrodita in C:\Users\Afrodita\Desktop\VIIIsemestar\PROJEKAT\XML-backend\agent)
+2020-07-10 16:07:09,865 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-10 16:11:01,281 INFO org.springframework.boot.StartupInfoLogger [main] Started AgentApplication in 232.853 seconds (JVM running for 234.393)
+2020-07-10 16:11:43,466 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-8] Successful login! Username: 'taca'.
+2020-07-10 16:11:50,882 INFO com.agent.service.SearchServiceImpl [https-jsse-nio-8443-exec-4] User search for ads. Search came back with 2 results
+2020-07-10 16:13:45,624 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-9] Successful login! Username: 'taca'.
+2020-07-10 16:17:39,848 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-2] Successful login! Username: 'taca'.
+2020-07-10 16:17:57,234 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-4] Successful login! Username: 'taca'.
+2020-07-10 16:20:10,854 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-1] Successful login! Username: 'taca'.
+2020-07-10 16:21:18,220 INFO com.agent.controller.AuthController [https-jsse-nio-8443-exec-10] Successful login! Username: 'taca'.

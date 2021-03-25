@@ -1,0 +1,56 @@
+<h1 class="pt-5 text-center" style="color:white;">Cart <span>MAKING REQUESTS</span></h1>
+<br>
+<div class="form-group" >
+    <span *ngIf="disableReservation">You do not have permission to reservation any ad.</span>
+    <br>
+    <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+        <div *ngFor="let rentACar of rentACars">
+            <div >
+                
+                <div class="card mb-3">
+                    <div  class="row no-gutters">
+                        <div *ngIf="!disableReservation"  style="text-align:center;padding-top: 120px;" class="col-md-1">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" [value]="rentACar.id" (change)="onCheckboxChange($event)" />     
+                                
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg"
+                                aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                                    dy=".3em">Image</text>
+                            </svg>
+
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">{{rentACar.ad.car.brand}} {{rentACar.ad.car.model}}</h5>
+                                <p><span>{{rentACar.ad.rating}}</span>/10</p>
+                                <p>Start date: <span>{{rentACar.startDate}}</span></p>
+                                <p>End date: <span>{{rentACar.endDate}}</span></p>
+                                <p class="card-text"><i class="fa fa-map-marker-alt" style="font-size:30px;color:#F5992E;"></i>  {{rentACar.ad.city}}</p>
+                                <p><button class="buttonDetails" (click)="open(rentACar.ad)"><span>Details</span></button></p>
+                                <p class="card-text" style="padding-top: 0px;">
+                                    <small *ngIf="rentACarExists(rentACar.adUser)" class="text-muted">Uploaded by {{rentACar.adUser.firstName}}  {{rentACar.adUser.lastName}}</small> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="!disableReservation" id="bundle">
+            <label><input [(ngModel)]="isChecked" [ngModelOptions]="{standalone: true}" type="checkbox" name="checkbox">
+                <span class="checkboxtext">Bundle</span>
+            </label>
+        </div>
+        <p class="error"style="color:red;" *ngIf="this.form.controls['checkArray'].errors?.required && !disableReservation">
+            Checkbox is required, select atleast one value.
+        </p>
+        <input class="btn btn-success" *ngIf="!this.form.controls['checkArray'].errors?.required" type="submit" value="Send Request"> 
+       
+    </form>
+</div>

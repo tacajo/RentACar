@@ -1,0 +1,65 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+<div>
+    <div id="banner">
+        <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
+            <div class="wrapper wrapper--w900">
+                <div class="card card-4 py-3">
+                    <div class="card-body">
+                        <ul class="tab-list">
+                            <h1 class="text-uppercase text-center font-weight-bold">
+                                Create ad reservation</h1>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form (submit)="onSubmit()" name="myForm" class="text-center mt-5" novalidate>
+
+
+                                    <div class="input-group">
+                                        <label class="label">Ad id:</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select class="input--style-1" name="adID" [(ngModel)]="reservation.adId"
+                                                tabindex="-1">
+                                                <option [value]="adID" *ngFor="let adID of adIDs">
+                                                    {{adID}}</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group">
+                                    <label class="label">Start date:</label>
+                                    <br>
+                                    <input class="" type="datetime-local" 
+                                        name="startDate"  [(ngModel)]="reservation.startDate">
+                                    </div>
+
+                                    <div class="input-group">
+                                    <label class="label">End date:</label>
+                                    <br>
+                                    <input class="" type="datetime-local" 
+                                        name="endDate" [(ngModel)]="reservation.endDate" >
+                                    </div>
+
+
+                                    <div class="text-center mt-3">
+                                        <button class="btn-orange" type="submit">Create reservation</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

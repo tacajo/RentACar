@@ -1,0 +1,141 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/register']">Sign up<span
+                    class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+
+<div id="register">
+    <div class="container" style="margin-top: 5em;">
+        <div class="card advance">
+            <div class="card-body">
+                <h1 class="text-uppercase text-center font-weight-bold">Create new ad
+                </h1>
+
+                <div class="tab-content">
+                    <form (submit)="onSubmit()" class="row text-center mt-5" name="myForm" novalidate>
+                        <div class="col-md-6">
+                            <label class="label">Brand:</label> <br>
+                            <select class="input--style-1" name="brand" [(ngModel)]="ad.car.brand" tabindex="-1">
+                                <option [value]="brand" *ngFor="let brand of codes.brands">
+                                    {{brand}}</option>
+                            </select> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label">Model:</label> <br>
+                            <select class="input--style-1" name="model" [(ngModel)]="ad.car.model" tabindex="-1">
+                                <option [value]="model" *ngFor="let model of codes.models">
+                                    {{model}}</option>
+                            </select> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label">Fuel:</label> <br>
+                            <select class="input--style-1" name="fuel" [(ngModel)]="ad.car.fuel" tabindex="-1">
+                                <option [value]="fuel" *ngFor="let fuel of codes.fuels"> {{fuel}}
+                                </option>
+                            </select> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label">Gear shift:</label> <br>
+                            <select class="input--style-1" name="gearShift" [(ngModel)]="ad.car.gearShift"
+                                tabindex="-1">
+                                <option [value]="gearShift" *ngFor="let gearShift of codes.gearShifts">
+                                    {{gearShift}}
+                                </option>
+                            </select> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label">Car class:</label> <br>
+                            <select class="input--style-1" name="driver-age" tabindex="-1" name="carClass"
+                                [(ngModel)]="ad.car.carClass">
+                                <option [value]="carClass" *ngFor="let carClass of codes.carClasses">
+                                    {{carClass}}</option>
+                            </select> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label"> Kilometres travelled:</label> <br>
+                            <input class="input--style-1" type="number" name="kilometres"
+                                [(ngModel)]="ad.car.traveledKms" placeholder="number of kilometres" required="required">
+                            <br> <br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label"> City:</label> <br>
+                            <input class="input--style-1" type="text" name="city" [(ngModel)]="ad.city"
+                                placeholder="city" required="required"> <br> <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="label"> Child seats:</label> <br>
+                            <input class="input--style-1" type="number" name="childSeats"
+                                [(ngModel)]="ad.car.childSeats" placeholder="number of seats" required="required"> <br>
+                            <br>
+                        </div>
+                        <!-- <div>
+                                        <img *ngFor="let url of urls" [src]="url" class="rounded mb-3" width="180">
+                                    </div>
+                                    <input type="file" multiple (change)="detectFiles($event)">
+
+                                    <div class="container row">
+                                        <div class="col-md-12">
+                                            <h1>Upload Image</h1>
+                                        </div>
+                                    </div> -->
+
+                        <div class="col-md-12 mt-5">
+                            <input type="file" multiple (change)="onFileChanged($event)">
+
+                        </div>
+                        <hr />
+                        <div *ngIf=message>{{message}}</div>
+                        <div class="row">
+                            <!-- <div class="col-md-6">
+                                            <input type="text" class="form-control" id="name" placeholder="image name"
+                                                [(ngModel)]="imageName" name="name" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="button" (click)="getImage()" value="Get Image">
+                                        </div>-->
+                        </div>
+
+                        <div class="col-md-12">
+                            <div *ngIf=retrievedImage>
+                                <img [src]="retrievedImage">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <label class="label">Price list id:</label> <br>
+                            <input class="input--style-1" type="number" name="priceList" [(ngModel)]="ad.priceListID"
+                                placeholder="choose price list" required="required" disabled>
+                            <br>
+                        </div>
+                        
+                        <button type="button" class="btn-advance mt-4" routerLinkActive='active' (click)="open()">Choose
+                            price list</button>
+                            <br>
+                        <div class="col-md-6">
+                            <label class="label">Discount for longer rentals :</label> <br>
+                            <input class="input--style-1" type="number" name="discount" [(ngModel)]="ad.discount"
+                                placeholder="discount" >
+                            <br>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="text-center mt-5">
+                                <button type="button" class="btn-orange" type="submit">Add car</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

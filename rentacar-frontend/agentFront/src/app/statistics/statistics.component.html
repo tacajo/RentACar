@@ -1,0 +1,42 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+
+    </div>
+</header>
+
+
+<div id="search-component" class="container-fluid" style="width: 100%; height: 100%;">
+    <div class="container">
+        <div class="search-bg">
+
+            <h1 class="text-center">Statistics <span>car rental</span></h1>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="chart-wrapper">
+                        <canvas style="width: 400px; height: 600px;margin: 3px;" baseChart [colors]="ChartColors"
+                            [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                            [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                        </canvas>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <canvas style="width: 400px; height:600px;margin: 3px ;" baseChart [data]="doughnutChartData"
+                            [labels]="doughnutChartLabels" [colors]="donutColors" [chartType]="doughnutChartType">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="chart-wrapper">
+                        <canvas style="width: 400px; height: 600px;margin: 10px; " baseChart [colors]="ChartColors"
+                            [datasets]="barChartData2" [labels]="barChartLabels2" [options]="barChartOptions"
+                            [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

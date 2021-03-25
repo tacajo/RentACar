@@ -1,0 +1,64 @@
+#request {
+  background: rgb(37, 45, 64, 0.7);
+  margin-bottom: 100px;
+}
+p {
+  color: white;
+  font-weight: bold;
+}
+
+.buttonDetails {
+    border-radius: 4px;
+    background-color: #252D40;
+    border: #F5992E solid 3px;
+    color: #F5992E;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .buttonDetails span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonDetails span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonDetails:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonDetails:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.btn {
+    margin-right: 10px;
+  }
+
+  .error-message {
+    animation: fadeOut 3s forwards;
+    animation-delay: 4s;
+    color: #8B0000;
+    padding: 10px;
+  }
+  
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+  

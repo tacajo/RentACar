@@ -1,0 +1,21 @@
+<div id="comment">
+
+    <p>By: <span>{{comment.username}}</span></p>
+    <p>DATE: <span>{{comment.date}}</span></p>
+
+
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-12">
+                <div class="card-body"> 
+                    <textarea name="commentMessage" style="width: 100%;" rows="5" disabled>{{comment.description}}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="homeComp.isAdmin()" style="float: right;">
+        <button (click)="acceptButton()" class="btn btn-success">Accept</button>
+        <button (click)="denyButton()" class="btn btn-secondary">Deny </button>
+    </div>
+       
+</div>

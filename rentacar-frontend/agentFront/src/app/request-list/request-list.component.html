@@ -1,0 +1,54 @@
+<div id="request">
+
+    <p style="text-align: center;"><span>{{requestAd.status}}</span></p>
+    <p>DATE: <span>{{requestAd.startDate}}</span></p>
+    <p>CREATED BY: <span>{{requestAd.user.firstName}} {{requestAd.user.lastName}}</span></p>
+    <p class="error-message">{{errorMessage}}</p>
+    <div *ngFor="let rentACar of requestAd.rentACars">
+        <div class="card mb-3">
+            <div class="row no-gutters">
+
+                <div class="col-md-4">
+                    <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6"
+                            dy=".3em">Image</text>
+                    </svg>
+
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title" *ngIf="isUndefined(rentACar.ad.car)">{{rentACar.ad.car.brand}}
+                            {{rentACar.ad.car.model}}</h5>
+                        <p>Start date: <span>{{rentACar.startDate}}</span></p>
+                        <p>End date: <span>{{rentACar.endDate}}</span></p>
+                        <p class="card-text"><i class="fa fa-map-marker-alt" style="font-size:30px;color:#F5992E;"></i>
+                            {{rentACar.ad.city}}</p>
+                        <button class="buttonDetails" (click)="open(rentACar.ad)"><span>Details</span></button>
+                        <div *ngIf="enableComment(rentACar)">
+                            <input [(ngModel)]="adRating.rating" type="number" min="1" max="10">
+                            <button class="btn-orange" (click)="rate(rentACar.ad.id)">Rate</button>
+
+                            <p style="float:right;">
+                                <button class="btn btn-secondary" (click)="canComment(rentACar.id)">
+                                    <i class="fa fa-comments" style="font-size:30px;color:#F5992E;"></i>
+                                </button>
+                            </p>
+                            <div *ngIf="showTextField && selectedRentACar == rentACar.id">
+                                <textarea [(ngModel)]="commentMessage" style="width: 100%;" name="commentMessage"
+                                    rows="5"></textarea>
+                                <button (click)="commentFun(rentACar.ad)" class="btn btn-success">Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="this.userRequests && isReserved()">
+        <small style="color: whitesmoke;margin:5px;">payment deadline <span>{{requestAd.paidDate}}</span></small>
+        <button style="float: right;" (click)="payButton(requestAd.id)" class="btn btn-secondary">Pay </button>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+table {
+    float:left;
+    width:19%;
+    margin: 3px;
+    border: 2px;
+    
+}
+
+img {
+    height: 20px;  
+    width: 20px;
+}
+
+#codebook {
+    background: url('src\app\images\login-bg.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 12vh 0;
+}
+
+#entity {
+    float: inline-start;
+    background: rgb(37, 45, 64, 0.7);
+    width: 40%;
+}
+
+#entity .custom-select {
+    width: 100px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+#entity .input-group {
+    width: 100px; 
+    margin: 0 auto; 
+    display: block;
+}
+#title {
+    color: white;
+}
+
+button {
+    width: 100px; 
+    margin: 0 auto; 
+    display: block;
+}

@@ -1,0 +1,43 @@
+<div id="users-list">
+  <div class="container">
+    <h1 class="pt-5 text-center"><span>USER</span></h1>
+    <br>
+    <br>
+      <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">Name</th>
+              <th scope="col">Surname</th>
+              <th scope="col">Email</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{user.id}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.email}}</td>
+              <td><button (click)="deleteUser(user.id)" class="btn btn-secondary"><img src="https://cdn1.iconfinder.com/data/icons/web-design-and-development-2-21/65/94-512.png" /></button></td>
+              <td>
+                    <button (click)=" enableUser(user.id)" class="btn btn-secondary">
+                        <div *ngIf="user.enabled">Blok</div>
+                        <div *ngIf="!user.enabled">Activate</div>
+                    </button>
+              <td>
+              <td>
+                  <button (click)=" disableReservation(user.id)" class="btn btn-secondary">
+                      <div *ngIf="user.disableReservation">Enable reservation</div>
+                      <div *ngIf="!user.disableReservation">Disable reservation</div>
+                  </button>
+              <td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</div>

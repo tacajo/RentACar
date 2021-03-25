@@ -1,0 +1,22 @@
+2020-07-04 15:54:27,295 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 15:54:27,307 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-07-04 16:12:45,524 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-04 16:12:59,866 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:12:59,873 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:12:59,877 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-07-04 16:19:55,555 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-04 16:20:06,115 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:20:06,116 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:20:06,118 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-07-04 16:24:41,336 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-04 16:24:50,962 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:24:50,964 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:24:50,966 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-07-04 16:43:05,087 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-04 16:43:14,806 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:43:14,808 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 16:43:14,809 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2020-07-04 17:04:38,229 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-04 17:04:45,325 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 17:04:45,327 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] Code archive: C:\Users\user\.m2\repository\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar
+2020-07-04 17:04:45,328 DEBUG org.springframework.boot.web.servlet.server.DocumentRoot [main] None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.

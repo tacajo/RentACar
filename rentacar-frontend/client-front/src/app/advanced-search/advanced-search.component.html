@@ -1,0 +1,119 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/register']">Sign up<span
+                    class="sr-only"></span></a>
+        </nav>
+        <nav id="nav" *ngIf="this.service.userIsPresent()">
+            <span>Welcome, {{this.service.currentUser.firstName}} </span>
+            <a class="nav-link" href="#" (click)="logout()" routerLinkActive='active' [routerLink]="['/login']">Log
+                out<span class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+
+<div *ngIf="!showResults" id="register">
+    <div class="container">
+        <div class="card advance">
+            <div class="card-body">
+                <ul class="tab-list">
+                    <h1 style="color: white; font-family: Arial, Helvetica, sans-serif;">Advanced search for a car
+                        rental
+                    </h1>
+                </ul>
+
+                <form class="text-center row mt-5">
+                    <div class="col-md-6">
+                        <label class="label">Brand:</label> <br>
+                        <select class="input--style-1" name="brand" [(ngModel)]="advancedSearch.ad.car.brand"
+                            tabindex="-1">
+                            <option [value]="brand" *ngFor="let brand of codes.brands">
+                                {{brand}}</option>
+                        </select> <br> <br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="label">Model:</label> <br>
+                        <select class="input--style-1" name="model" [(ngModel)]="advancedSearch.ad.car.model"
+                            tabindex="-1">
+                            <option [value]="model" *ngFor="let model of codes.models">
+                                {{model}}</option>
+                        </select> <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label">Fuel:</label> <br>
+                        <select class="input--style-1" name="fuel" [(ngModel)]="advancedSearch.ad.car.fuel"
+                            tabindex="-1">
+                            <option [value]="fuel" *ngFor="let fuel of codes.fuels"> {{fuel}}
+                            </option>
+                        </select> <br> <br>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="label">Gear shift:</label> <br>
+                        <select class="input--style-1" name="gearShift" [(ngModel)]="advancedSearch.ad.car.gearShift"
+                            tabindex="-1">
+                            <option [value]="gearShift" *ngFor="let gearShift of codes.gearShifts">
+                                {{gearShift}}
+                            </option>
+                        </select> <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label">Car class:</label> <br>
+                        <select class="input--style-1" name="driver-age" tabindex="-1" name="carClass"
+                            [(ngModel)]="advancedSearch.ad.car.carClass">
+                            <option [value]="carClass" *ngFor="let carClass of codes.carClasses">
+                                {{carClass}}</option>
+                        </select> <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label> Kilometres travelled:</label><br>
+                        <input class="input--style-1" type="number" name="kilometres" min="0"
+                            [(ngModel)]="advancedSearch.ad.car.traveledKms" placeholder="number of kilometres"
+                            required="required">
+                        <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="label">Child seats:</label> <br>
+                        <input class="input--style-1" type="number" name="childSeats" min="0"
+                            [(ngModel)]="advancedSearch.ad.car.childSeats" placeholder="number of seats"
+                            required="required"> <br>
+                        <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label> Kilometers you plan to travel:</label> <br>
+                        <input type="number" name="planKms" [(ngModel)]="advancedSearch.planKms" min="0"
+                            placeholder="planed kms" required="required"> <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label> From price:</label> <br>
+                        <input type="number" name="fromPrice" [(ngModel)]="advancedSearch.fromPrice" min="0"
+                            placeholder="lowest" required="required"> <br> <br>
+                    </div>
+                    <div class="col-md-6">
+                        <label> To price:</label> <br>
+                        <input type="number" name="toPrice" [(ngModel)]="advancedSearch.toPrice" placeholder="highest" min="0"
+                            required="required"> <br> <br>
+                    </div>
+                </form>
+                <div class="alert alert-danger" *ngIf="noResults">No results</div>
+                <div class=" text-center mt-5">
+                    <button class="btn-orange" (click)="onSubmit()" type="submit">search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showResults" id="search-component-show-results">
+    <div class="container">
+        <button class="btn-orange mt-3" type="submit" (click)="returnToSearch()">BACK TO SEARCH</button>
+        <div *ngFor="let ad of ads">
+            <app-ad-list [planKms]="this.advancedSearch.planKms" [startDate]="this.startDate" [endDate]="this.endDate" [ad]="ad"></app-ad-list>
+        </div>
+    </div>
+</div>

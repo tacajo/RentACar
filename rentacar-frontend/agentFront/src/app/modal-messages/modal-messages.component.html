@@ -1,0 +1,19 @@
+<div class="modal-header color">
+    <h4 class="modal-title">Messages with {{receiver?.firstName}} {{receiver?.lastName}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body color">
+    <div *ngFor="let message of messages" style="border-bottom: white solid 2px; border-radius: 3px; padding-top: 3px;">
+        <div *ngIf="currentUser?.id === message.senderID"><b><p style="font-weight: 800; color: #F5992E; font-size: 1.5rem;">You:</p></b></div>
+        <div *ngIf="receiver?.id === message.senderID"><b><p style="font-weight: 800; color: #F5992E; font-size: 1.5rem;">{{receiver?.firstName}}:</p></b></div>
+        <p >{{message.content}}</p>
+        <small class="text-muted">{{message.date}}</small>
+    </div>
+</div>
+<div class="modal-footer color">
+    <input type="text" name="content" [(ngModel)]="message1.content" placeholder="Type your message..." style="width: 230px;margin-right: 10px;">
+    <button type="button" class="buttonDetails" (click)="sendMessage(currentUser.id, receiver.id)">Send</button>
+    <button type="button" class="buttonDetails" (click)="activeModal.close('Close click')">Close</button>
+</div>

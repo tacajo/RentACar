@@ -1,0 +1,118 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo navbar-brand"><span>RENT</span> A CAR</a>
+        <nav id="nav" *ngIf="!this.service.userIsPresent()">
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/login']">Sign in<span
+                    class="sr-only"></span></a>
+            <a class="nav-link" href="#" routerLinkActive='active' [routerLink]="['/register']">Sign up<span
+                    class="sr-only"></span></a>
+        </nav>
+        <nav id="nav" *ngIf="this.service.userIsPresent()">
+            <a *ngIf="!isAdmin()" class="nav-link" (click)="showRequests()" href="#">Requests for <span>My ads</span></a>
+            <a *ngIf="!isAdmin() && !isAgent()" class="nav-link" (click)="showUserRequests()" href="#">My requests</a>
+            <a *ngIf="isAdmin()" class="nav-link" (click)="showCodeBookButton()" href="#">CodeBook</a>
+            <a class="nav-link" href= "#" *ngIf="isUser()" (click)="showCart()"><i class="fa fa-shopping-cart" style="font-size:27px;color:#F5992E;"></i></a>
+            <a *ngIf="(isAgent() && !showResults) || (isUser() && !showResults)" class="nav-link" href="#"
+                (click)="messages()">Messages<span class="sr-only"></span></a>
+            <a *ngIf="(isAgent() && !showResults) || (isUser() && !showResults)" class="nav-link" [routerLink]="['/newAd']">New ad<span class="sr-only"></span></a>
+            <a *ngIf="(isAgent() && !showResults) || (isUser() && !showResults)" class="nav-link" [routerLink]="['/newPriceList']"
+                >New price list<span class="sr-only"></span></a>
+            <a class="nav-link" href="#" (click)="logout()" routerLinkActive='active' [routerLink]="['/login']">Log
+                out<span class="sr-only"></span></a>
+        </nav>
+    </div>
+</header>
+
+<div *ngIf="!showResults && !showMessages && !cartButton && !showRequest && !userRequests && !showCodeBook" id="search-component" class="container-fluid">
+    <div class="container">
+        <div class="search-bg">
+            <div class="card-body">
+                <h1 class="pt-5 text-center">Search for a <span>car rental</span></h1>
+                <br>
+                <ul>
+                    <li>
+                        <label class="label">Rental location:</label>
+                        <br>
+                        <input class="" type="text" [(ngModel)]="lightSearch.city" name="city" placeholder="City"
+                            required="required">
+                    </li>
+                    <li>
+                        <label class="label">Pick-up date:</label>
+                        <br>
+                        <input class="" type="datetime-local" [(ngModel)]="lightSearch.startDate" name="startDate"
+                            min="{{this.minDate}}">
+                    </li>
+                    <li>
+                        <label class="label">Drop-off date:</label>
+                        <br>
+                        <input class="" type="datetime-local" [(ngModel)]="lightSearch.endDate" name="endDate"
+                            min="{{this.minDate}}">
+                    </li>
+                    <li>
+                        <button class="btn-orange" (click)="lightSearchSubmit()" type="submit">search</button>
+                    </li>
+                </ul>
+                <button type="button" class="btn-advance mt-4" routerLinkActive='active'
+                    [routerLink]="['/advancedSearch']" (click)="advancedSearch()">Advanced
+                    search</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="showResults" id="search-component-show-results">
+    <div class="container">
+        <button class="btn-orange mt-3" type="submit" (click)="returnToSearch()">BACK TO SEARCH</button>
+        <div style="float:right; margin-top: 16px; margin-right: 0px;" class="row">
+            <h5 style="color: #F5992E; padding-right: 10px;">Sort by: </h5>
+            <select [(ngModel)]="selected" (change)='onOptionsSelected($event)'
+                style="color: #F5992E; background-color: #252D40; border: none;">
+                <option value="price">Price</option>
+                <option value="rating">Rating</option>
+                <option value="traveledKms">Traveled kms</option>
+            </select>
+        </div>
+
+        <div *ngFor="let ad of ads">
+            <app-ad-list [ad]="ad"></app-ad-list>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showMessages" id="messages-component">
+    <div class="container">
+        <button class="btn-orange mt-3" type="submit" (click)="returnToSearch()">BACK TO SEARCH</button>
+        <app-messages></app-messages>
+    </div>
+</div>
+
+<div *ngIf="isAgent() || isUser() && userRequests" id="search-component-show-results">
+    <div class="container">
+        <h1 class="pt-5 text-center" style="color:white;">MY REQUESTS</h1>
+        <br>
+        <div *ngFor="let requestAd of userRequestAds">
+            <app-request-list [userRequests]="userRequests" [requestAd]="requestAd"></app-request-list>
+        </div>
+    </div>
+</div>
+
+<div *ngIf ="isAgent() || isUser() && showRequest" id="search-component-show-results">
+    <div class="container">
+        <h1 class="pt-5 text-center" style="color:white;">REQUESTS for <span>my ads</span></h1>
+        <br>
+        <div *ngFor="let requestAd of requestAds">
+            <app-request-list [requestAd]="requestAd"></app-request-list>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cartButton" id="search-component-show-results">
+    <div class="container">
+        <app-cart-list  [rentACars]="cartAds"></app-cart-list>
+    </div>
+</div>
+
+<div *ngIf="isAdmin() && showCodeBook">
+    <app-codebook></app-codebook>
+</div>
